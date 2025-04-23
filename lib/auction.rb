@@ -6,5 +6,12 @@ class Auction
     @items = []
   end
 
+  def add_item(item)
+    @items << item
+  end
+
+  def item_names
+    
+  end
 
 end
