@@ -11,9 +11,19 @@ class Auction
   end
 
   def item_names
-    items.map do |item| 
+    @items.map do |item| 
       item.name
     end
   end
+
+  def unpopular_items
+    @items.select do |item| 
+      item.bids.empty? 
+    end
+  end
+
+  # def potential_revenue
+
+  # end
 
 end
