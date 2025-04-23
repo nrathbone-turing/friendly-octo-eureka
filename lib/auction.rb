@@ -22,8 +22,12 @@ class Auction
     end
   end
 
-  # def potential_revenue
-
-  # end
+  def potential_revenue
+    sum = 0
+    @items.each do |item| 
+      sum += item.current_high_bid.to_i
+    end
+    sum
+  end
 
 end
