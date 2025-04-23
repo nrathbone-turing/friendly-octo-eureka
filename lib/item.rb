@@ -11,11 +11,11 @@ class Item
     @bids[attendee] = amount_bid
   end
 
-  # def current_high_bid(bids)
-  #   bids.max_by do |attendee, amount|
-  #     amount
-  #   end[-1]
-  # end
+  def current_high_bid
+    @bids.max_by do |attendee, amount|
+      amount
+    end&.last
+  end
 
 
 end
