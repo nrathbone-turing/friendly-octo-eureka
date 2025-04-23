@@ -7,12 +7,12 @@ class Item
     @name = name
   end
 
-  def add_bid(attendee, amount_bid)
-    @bids[attendee] = amount_bid
+  def add_bid(attendee_name, amount_bid)
+    @bids[attendee_name] = amount_bid
   end
 
   def current_high_bid
-    @bids.max_by do |attendee, amount_bid|
+    @bids.max_by do |attendee_name, amount_bid|
       amount_bid
     end&.last
   end
